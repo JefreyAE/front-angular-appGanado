@@ -1,0 +1,30 @@
+
+<section class="frontend row"> 
+    <h1 class="titulo col-md-12">Listado de animales activos</h1>
+    <div class="table-responsive">
+        <table class="animals table table-striped table-sm table-hover table-light">
+            <thead>
+                <tr class="table-primary">
+                    <th>Apodo</th>
+                    <th>Nombre en certificado</th>
+                    <th>Código</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Raza</th>
+                    <th>Sexo</th>
+                    <th>Ver</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let animal of listActive">
+                    <td>{{animal.nickname}}</td>
+                    <td>{{animal.certification_name}}</td>
+                    <td>{{animal.code}}</td>
+                    <td>{{animal.birth_date.split(' ')[0]}}</td>
+                    <td>{{animal.race}}</td>
+                    <td>{{animal.sex}}</td>
+                    <td><a class="btn btn-sm btn-info" (click)="redirect(animal.id)" >Detalle</a></td>
+                </tr>
+            <tbody>
+        </table>
+    </div>
+</section>

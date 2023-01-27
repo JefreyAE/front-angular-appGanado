@@ -1,0 +1,117 @@
+<nav id="nav-1" class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link " [routerLink]="['/main/index']" aria-current="page">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Módulo de Animales
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['/animals/index']">Listado de
+                                animales activos</a></li>
+                        <li><a class="dropdown-item" href="/animals/dead">Listado de
+                                animales fallecidos</a></li>
+                        <li><a class="dropdown-item"
+                            [routerLink]="['/animals/indexAll']">Listado de todos
+                                los animales registrados</a></li>
+                        <li><a class="dropdown-item" href="/animals/register/">Registrar un
+                                nacimiento</a></li>
+                        <li><a class="dropdown-item" href="/animals/search">Buscar un animal</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/purchases/register/" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Módulo de
+                        Compras</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/purchases/index/">Listado animales
+                                comprados</a></li>
+                        <li><a class="dropdown-item" href="/purchases/register/">Registrar compras</a>
+                        </li>
+                        <li><a class="dropdown-item" href="/purchases/search/">Consultar compras por
+                                fecha</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/sales/register/" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Módulo de
+                        Ventas</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/sales/index/">Listado animales vendidos</a>
+                        </li>
+                        <li><a class="dropdown-item" href="/sales/register/">Registrar ventas</a></li>
+                        <li><a class="dropdown-item" href="/sales/search/">Consultar ventas por fecha</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/incidents/register/" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Módulo de
+                        Incidentes</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/incidents/index/">Listado de incidentes</a>
+                        </li>
+                        <li><a class="dropdown-item" href="/incidents/register/">Registrar un
+                                incidentes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/injectables/register/" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Módulo de
+                        Inyectables</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/injectables/index/">Listado inyectables
+                                aplicados</a></li>
+                        <li><a class="dropdown-item" href="/injectables/register/">Registrar aplicación
+                                de inyectable</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/notifications/index/" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Módulo de
+                        Notificaciones</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item"
+                                href="/notifications/index/notificaciones activas">Listado de
+                                notificaciones activas</a></li>
+                        <li><a class="dropdown-item"
+                                href="/notifications/checked/notificaciones vistas">Listado de
+                                notificaciones vistas</a></li>
+                        <li><a class="dropdown-item"
+                                href="/notifications/indexAll/todas las notificaciones">Listado de todas
+                                las notificaciones</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown"
+                      role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Módulo de
+                      Estadísticas</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="/statistics/index">Estadísticas globales</a></li>
+                      <li><a class="dropdown-item" href="/statistics/auctions">Estadísticas de subastas</a></li>
+                  </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown" style="margin-right: 100px;">
+                    <a class="nav-link dropdown-toggle" href="/user/profile"
+                        href="/user/profile" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Cuenta</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/user/profile">Cambio de contraseña</a></li>
+                        <li><a class="dropdown-item" href="/user/logout/">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
